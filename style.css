@@ -1,0 +1,72 @@
+:root {
+  --main-color: #7469b6;
+  --accent-color: #e1afd1;
+  --light-color: #ffe6e6;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+  background-color: var(--accent-color);
+  height: 100vh;
+}
+
+.intro {
+  padding: 24px;
+}
+
+#loveScoreForm {
+  background-color: var(--main-color);
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 24px;
+  padding: 50px;
+  border-radius: 15px;
+
+  button {
+    grid-column: span 2;
+    padding: 12px;
+    border-radius: 12px;
+  }
+}
+
+.loveScoreResult {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  font-size: 30px;
+  background-color: var(--light-color);
+  padding: 100px;
+  border-radius: 15px;
+  margin: 12px;
+  max-width: 1000px;
+  filter: drop-shadow(2px 2px 3px var(--main-color));
+
+  #result {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #loveScoreForm {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3 1fr);
+
+    button {
+      grid-column: span 1;
+    }
+  }
+  .loveScoreResult {
+    padding: 12px;
+  }
+}
